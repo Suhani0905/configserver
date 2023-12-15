@@ -1,0 +1,30 @@
+server:
+  port: 9090
+ 
+ 
+spring:
+ 
+  cloud:
+    gateway:
+      routes:
+        -  id: wishlist-service
+           uri: http://localhost:8082/
+           predicates:
+             - Path=/api/v1/wishlist/**
+        - id: movie-service
+          uri: http://localhost:8080/
+          predicates:
+            - Path=/api/v1/movie/**
+        - id: user-service
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/api/v1.0/user/**
+ 
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    instance:
+      hostname: localhost
