@@ -15,7 +15,7 @@ spring:
             allowedHeaders: "*"
       routes:
         -  id: wishlist-service
-           uri: http://localhost:8082/
+           uri: http://ec2-3-142-80-0.us-east-2.compute.amazonaws.com:8082/
            predicates:
              - Path=/api/v1/wishlist/**
         -  id: auth-service
