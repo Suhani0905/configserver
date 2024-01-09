@@ -37,6 +37,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: ec2-3-142-80-0.us-east-2.compute.amazonaws.com:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
     instance:
-      hostname: ec2-3-142-80-0.us-east-2.compute.amazonaws.com
+      hostname: localhost
