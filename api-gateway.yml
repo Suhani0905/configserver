@@ -10,7 +10,7 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "*"
+            allowedOrigins: "http://movie-app-assignment.s3-website.us-east-2.amazonaws.com"
             allowedMethods: "*"
             allowedHeaders: "*"
       routes:
